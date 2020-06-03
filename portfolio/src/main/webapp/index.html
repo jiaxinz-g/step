@@ -9,13 +9,20 @@
   <body>
     <div id="content">
       <h1>Jiaxin Zhang Portfolio</h1>
+
       <div id="data">
-        <button onclick="getDataUsingArrowFunctions()">Greeting message</button>
+         <body onload="getDataUsingArrowFunctions()">
+         </body>
         <div id="data-container"></div>
       </div>
-      <p>I like painting, here are some of my watercolors.</p>
-      <img src="images/20200119_151109.jpg"/>
-      <img src="images/IMG_20190728_162926.jpg"/>
+
+      <form action="/data" method="POST">
+        <p>Leave your comment:</p>
+        <textarea name="comment"></textarea>
+        <br/><br/>
+        <input type="submit" />
+      </form>
+
       <p>Click here to get a random message:</p>
       <button onclick="addRandomGreeting()">Hello</button>
       <div id="greeting-container"></div>
