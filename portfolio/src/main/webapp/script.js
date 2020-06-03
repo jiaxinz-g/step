@@ -28,10 +28,10 @@ function addRandomGreeting() {
 }
 
 /**
- * Fetches the content from /data page from the server and adds it to the DOM.
+ * Fetches comments from the server and adds them to the DOM.
  */
-function getDataUsingArrowFunctions() {
-  fetch('/data').then(response => response.text()).then((quote) => {
-    document.getElementById('data-container').innerText = quote;
+function getComments() {
+  fetch('/list-comments').then(response => response.text()).then((quote) => {
+    document.getElementById('comments-container').innerText = quote;
   });
 }
